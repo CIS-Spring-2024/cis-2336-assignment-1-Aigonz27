@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <Title> Boomer's Cafeteria</title>
+        <link rel="stylesheet" href="../CSS/style.css">
+        <!--Made a link named stylesheet so I can have an external css file to design and work on my stuff for both HTML's (bio
+            and main page)-->
+    <style>
+        h1 {text-align: center;}
+        body{background-color: lightyellow;}
+    </style>
+    <!--This style is to help give it color to the background and sort the text in the center.-->
+</head>
+<body>
+<h1>Boomer's Cafeteria Page</h1>
+<img src="../Images/LogoSample_ByTailorBrands-removebg-preview.png">
+<div class="container">
+    <!--Wrote this div to give it a class for the upcoming code.-->
+    <img src="../Images/menu.png" class="menu_button" onclick="open_the_menu()"> <!--This was my favorite part of my code, I learned how to make a menu 
+    by clicking on an image, this code is what opens the menu on the right corner.-->
+    <div class="menu_box" id="menu">
+        <div class="right_links">
+            <img src="../Images/close.png" class="close_button" onclick="close_the_menu()"> <!--This code is the one that closes the menu.-->
+        </div>
+        <div class="page_links"> <!--Note: Remind TA to ask how I can set my logo to the left of my main h1 and how I can put my 
+        links on the left side as a column.-->
+                <a href="./Assignment-1-Main-Page.html"> Home</a>
+                <a href="./Assignment-1-bio.html"> Biography/About</a>
+                <a href="#"> Menu</a>
+                <a href="#"> Recipes</a>
+                <a href="#"> Blog</a>
+                <a href="#"> services</a>
+                <a href="#"> Contact us</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Made all these href codes to one class so it can all share one same class, so when I go to CSS, it's easier to work with-->
+<script>
+    var menu = document.getElementById("menu");
+    function close_the_menu(){
+        menu.style.top="-100%";
+    }
+    function open_the_menu(){
+        menu.style.top="17%";
+    }
+</script> <!--This script is to help fully "close" and "open" the background for the class "page_links"-->
+</body>
+</html>
